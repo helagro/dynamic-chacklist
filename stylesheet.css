@@ -5,13 +5,14 @@ body{
     background-image: url("https://picsum.photos/1920/1080");
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Roboto', sans-serif;
     font-size: 120%;
     margin: 0;
 }
 
 select{
-    font-size: .7em;
     color: #fff;
+    font-size: .7em;
 }
 
 label {
@@ -22,7 +23,11 @@ label {
     -ms-user-select: none;
     user-select: none;
 }
-
+h2{
+    font-weight: 900;
+    overflow: hidden;
+    overflow-wrap: normal;
+}
 p{
     margin: 0;
 }
@@ -38,12 +43,12 @@ p{
     border-radius: 1.6em;
     color: #fff;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     margin: 1em auto;
-    min-width: 50em;
-    width: min-content;
+    max-width: 100%;
     padding: 1em;
+    width: max-content;
 }
 
 .checklistGroupElement *{
@@ -58,4 +63,14 @@ p{
 
 .checklistItemDesc{
     margin-left: auto;
+}
+
+@media (max-width: 50em){
+    body{
+        font-size: 70%;
+    }
+    .checklistGroupElement{
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
