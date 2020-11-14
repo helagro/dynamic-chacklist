@@ -1,7 +1,7 @@
 ## Status
 Not finished
 
-### Example of checklistitems.js
+### Example of checklistItems.js
 ```javascript
 const checklistGroups = [
     {header:"Start", finishedItemsIds:[], collectedTags:[], itemAmountOnScreen:-1, items:[
