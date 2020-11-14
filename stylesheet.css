@@ -1,0 +1,61 @@
+
+
+body{
+    background-attachment: fixed;
+    background-image: url("https://picsum.photos/1920/1080");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 120%;
+    margin: 0;
+}
+
+select{
+    font-size: .7em;
+    color: #fff;
+}
+
+label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+p{
+    margin: 0;
+}
+
+
+#checklistsContainer{
+}
+
+.checklistGroupElement{
+    align-items: center;
+    background-color: #424242cb;
+    border: 0.2em solid #333;
+    border-radius: 1.6em;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    margin: 1em auto;
+    min-width: 50em;
+    width: min-content;
+    padding: 1em;
+}
+
+.checklistGroupElement *{
+    padding: .6em;
+    width: max-content;
+}
+
+.checklistGroupHeader{
+    grid-column: 1 / -1;
+    margin: 0 auto;
+}
+
+.checklistItemDesc{
+    margin-left: auto;
+}
