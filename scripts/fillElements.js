@@ -107,7 +107,7 @@ function addChecklistItemElement(checklistGroupElement, checklistItem){
             element = createRadioBtnsElement(checklistItem)
             break
         case "number":
-            element = createNumberElement(checklistItem)
+            element = createNumberInput(checklistItem)
             break
         case "link":
             openChecklistItemPage(checklistItem)
@@ -179,12 +179,26 @@ function createRadioBtn(){
     return radioBtn
 }
 
+function createNumberInput(checklistItem){
+    const numberInputDiv = document.createElement("div")
+    numberInputDiv.appendChild(createNumberElement())
+    numberInputDiv.appendChild(createNumberSubmitBtn())
 
-function createNumberElement(checklistItem){
+    return numberInputDiv
+}
+function createNumberElement(){
     const numberInput = document.createElement("input")
     numberInput.type = "number"
 
     return numberInput
+}
+function createNumberSubmitBtn(){
+    const btn = document.createElement("button")
+    btn.innerText = "Submit"
+    btn.className = "textSubmitBtn"
+    btn.addEventListener("click", textInputListener)
+
+    return btn
 }
 
 

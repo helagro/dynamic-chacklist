@@ -65,6 +65,12 @@ p{
     margin-left: auto;
 }
 
+.textSubmitBtn{
+    height: 100%;
+    border: unset;
+    margin-left: .4em;
+}
+
 @media (max-width: 50em){
     body{
         font-size: 70%;

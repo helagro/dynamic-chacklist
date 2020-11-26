@@ -20,7 +20,8 @@ const checklistGroups = [
         {name:"That was not a fruit", type:"radio", showRules:{type:"NEEDS", tags:["NOT_FRUIT"]}, items:[
             {text:"ok", tags:[]},
             {text:"I know", tags:["KNOWS_ABOUT_FRUIT"]}
-        ]}
+        ]},
+        {name:"Iq:", type:"number", showRules:{type:"NEEDS", tags:["NOT_FRUIT"]}, items:[]}
     ]},
     //The links are opened immediately!
     {header:"Links", finishedItemsIds:[], collectedTags:[], itemAmountOnScreen:-1, items:[

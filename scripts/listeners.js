@@ -11,6 +11,17 @@ function checkListener(event){
     
     handleFinishedChecklistItem(radioBtnsDiv.id, value)
 }
+function textInputListener(event){
+    const textInputDiv = event.target.parentElement
+    const textInput = textInputDiv.children[0]
+    const inputText = textInput.value
+    console.log(textInput, inputText)
+
+    if(inputText == "")
+        return
+
+    handleFinishedChecklistItem(textInputDiv.id, inputText)
+}
 
 
 //ANCHOR listener handlers
