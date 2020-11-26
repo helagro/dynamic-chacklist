@@ -106,9 +106,12 @@ function addChecklistItemElement(checklistGroupElement, checklistItem){
         case "radio":
             element = createRadioBtnsElement(checklistItem)
             break
+        case "number":
+            element = createNumberElement(checklistItem)
+            break
         case "link":
             openChecklistItemPage(checklistItem)
-            return
+            break
         default:
             alert("Invalid checklistItemType: " + checklistItem.type)
     }   
@@ -174,6 +177,14 @@ function createRadioBtn(){
     elementIdIStr = elementIdI.toString() //Not getter to not increment number
     radioBtn.name = elementIdI
     return radioBtn
+}
+
+
+function createNumberElement(checklistItem){
+    const numberInput = document.createElement("input")
+    numberInput.type = "number"
+
+    return numberInput
 }
 
 
