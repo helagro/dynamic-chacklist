@@ -111,7 +111,7 @@ function addChecklistItemElement(checklistGroupElement, checklistItem){
             break
         case "link":
             openChecklistItemPage(checklistItem)
-            break
+            return
         default:
             alert("Invalid checklistItemType: " + checklistItem.type)
     }   
