@@ -22,6 +22,9 @@ function nextChecklistGroup(){
     addChecklistGroupHeaderElement(checklistGroupElement, checklistGroup.header)
     const amountAdded = addChecklistItemElements(checklistGroupElement, checklistGroup.items)
     checklistGroup.itemAmountOnScreen = amountAdded
+
+    if(amountAdded == checklistGroup.finishedItemsIds.length)
+        nextChecklistGroup()
 }
 function updateChecklistIndexes(){
     checklistGroupI ++
