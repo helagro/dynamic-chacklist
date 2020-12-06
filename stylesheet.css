@@ -47,6 +47,7 @@ p{
     display: flex;
     flex-direction: column-reverse;
     margin-top: 25vh;
+    padding-bottom: 4em;
 }
 
 .checklistGroupElement{
