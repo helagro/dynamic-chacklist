@@ -5,6 +5,10 @@
     --dark-background: #303030cf;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-attachment: fixed;
     background-image: url("https://picsum.photos/1920/1080");
@@ -39,12 +43,10 @@ p{
 
 
 #checklistsContainer{
-    align-content: center;
-    box-sizing: border-box;
-    display: grid;
-    height: 100vh;
-    padding-bottom: 20em;
-    width: 100%;
+    margin-top: 30%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .checklistGroupElement{

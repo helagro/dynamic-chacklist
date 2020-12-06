@@ -25,6 +25,9 @@ function nextChecklistGroup(){
 
     if(amountAdded == checklistGroup.finishedItemsIds.length)
         nextChecklistGroup()
+    else
+        console.log("scroll")
+        //checklistsContainer.scrollTop = checklistsContainer.scrollHeight
 }
 function updateChecklistIndexes(){
     checklistGroupI ++
