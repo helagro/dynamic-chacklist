@@ -17,6 +17,7 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 120%;
     margin: 0;
+    overflow-y: scroll;
 }
 
 select{
@@ -46,7 +47,6 @@ p{
     display: flex;
     flex-direction: column-reverse;
     margin-top: 25vh;
-    overflow: auto;
 }
 
 .checklistGroupElement{
