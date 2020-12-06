@@ -43,7 +43,7 @@ p{
 
 
 #checklistsContainer{
-    margin-top: 30%;
+    margin-top: 20vh;
     overflow: auto;
     display: flex;
     flex-direction: column-reverse;
