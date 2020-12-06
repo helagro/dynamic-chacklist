@@ -85,6 +85,9 @@ p{
     height: 100%;
     margin-left: .4em;
 }
+.textSubmitBtn:active{
+    opacity: 0.3;
+}
 
 @media (max-width: 50em){
     body{
