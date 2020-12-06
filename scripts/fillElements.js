@@ -227,7 +227,7 @@ function animateShowGroup(elem){
     animateSlideIn(elem)
 }
 function animateHightExpand(elem){
-    var id = setInterval(heightFrame, 5);
+    var id = setInterval(heightFrame, 3);
     console.log(elem.offsetHeight)
     var maxHeight = elem.offsetHeight;
     var lastMeasuredHeight = -1
@@ -239,7 +239,7 @@ function animateHightExpand(elem){
             return
         }
         lastMeasuredHeight = measuredHeight
-        maxHeight += 4; 
+        maxHeight += 2; 
         elem.style.maxHeight = maxHeight + 'px'; 
     }
 }
