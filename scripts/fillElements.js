@@ -23,11 +23,11 @@ function nextChecklistGroup(){
     const amountAdded = addChecklistItemElements(checklistGroupElement, checklistGroup.items)
     checklistGroup.itemAmountOnScreen = amountAdded
 
+    animateShowGroup(checklistGroupElement)
+
     if(amountAdded == checklistGroup.finishedItemsIds.length)
         nextChecklistGroup()
-    else
-        console.log("scroll")
-        //checklistsContainer.scrollTop = checklistsContainer.scrollHeight
+
 }
 function updateChecklistIndexes(){
     checklistGroupI ++
@@ -221,6 +221,41 @@ function getNextElementId(){
     return elementIdI.toString()
 }
 
+
+function animateShowGroup(elem){
+    animateHightExpand(elem)
+    animateSlideIn(elem)
+}
+function animateHightExpand(elem){
+    var id = setInterval(heightFrame, 5);
+    console.log(elem.offsetHeight)
+    var maxHeight = elem.offsetHeight;
+    var lastMeasuredHeight = -1
+
+    function heightFrame() {
+        var measuredHeight = elem.offsetHeight
+        if (measuredHeight == lastMeasuredHeight) {
+            clearInterval(id);
+            return
+        }
+        lastMeasuredHeight = measuredHeight
+        maxHeight += 4; 
+        elem.style.maxHeight = maxHeight + 'px'; 
+    }
+}
+function animateSlideIn(elem){
+    var id = setInterval(slideFrame, 5);
+    var offset = -150
+
+    function slideFrame() {
+        if (offset == 0){
+            clearInterval(id)
+            return
+        }
+        elem.style.transform = "translateX(" + offset + 'vh)'; 
+        offset += 2;
+    }
+}
 
 
 main()

@@ -43,10 +43,10 @@ p{
 
 
 #checklistsContainer{
-    margin-top: 20vh;
-    overflow: auto;
     display: flex;
     flex-direction: column-reverse;
+    margin-top: 25vh;
+    overflow: auto;
 }
 
 .checklistGroupElement{
@@ -57,11 +57,14 @@ p{
     color: #fff;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    transform: translateX(-150vh);
+    padding: 1em;
+    max-height: 0px;
     justify-content: center;
     margin: 1em auto;
     max-width: 100%;
-    padding: 1em;
     width: max-content;
+    overflow: hidden;
 }
 
 .checklistGroupElement *{
