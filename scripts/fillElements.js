@@ -189,6 +189,7 @@ function createNumberInput(checklistItem){
 function createNumberElement(){
     const numberInput = document.createElement("input")
     numberInput.type = "number"
+    numberInput.className = "numberInput"
 
     return numberInput
 }
