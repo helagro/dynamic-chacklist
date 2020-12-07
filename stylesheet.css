@@ -56,20 +56,21 @@ p{
     border-radius: 3em;
     box-shadow: 0.2em 0.2em 0.2em var(--shadow-color);
     color: #fff;
-    opacity: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-height: 0px;
     justify-content: center;
     margin: 1em auto;
+    max-height: 0px;
     max-width: 100%;
-    width: max-content;
+    opacity: 0;
     overflow: hidden;
+    padding: 0 1em;
+    width: max-content;
 }
 
 .checklistGroupElement *{
-    padding: .5em;
-    margin: 0 .2em .5em .2em;
+    margin: 0 .1em .5em .1em;
+    padding: .4em;
     width: max-content;
 }
 
