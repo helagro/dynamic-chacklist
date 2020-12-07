@@ -223,11 +223,10 @@ function getNextElementId(){
 
 
 function animateShowGroup(elem){
-    animateHightExpand(elem)
-    animateSlideIn(elem)
+    animateHightExpand(elem) //calls opacity
 }
 function animateHightExpand(elem){
-    var id = setInterval(heightFrame, 3);
+    var id = setInterval(heightFrame, 5);
     console.log(elem.offsetHeight)
     var maxHeight = elem.offsetHeight;
     var lastMeasuredHeight = -1
@@ -236,6 +235,7 @@ function animateHightExpand(elem){
         var measuredHeight = elem.offsetHeight
         if (measuredHeight == lastMeasuredHeight) {
             clearInterval(id);
+            opacity(elem)
             return
         }
         lastMeasuredHeight = measuredHeight
@@ -243,17 +243,17 @@ function animateHightExpand(elem){
         elem.style.maxHeight = maxHeight + 'px'; 
     }
 }
-function animateSlideIn(elem){
-    var id = setInterval(slideFrame, 5);
-    var offset = -150
+function opacity(elem){
+    var id = setInterval(slideFrame, 10);
+    var opacity = 0
 
     function slideFrame() {
-        if (offset == 0){
+        if (opacity == 1){
             clearInterval(id)
             return
         }
-        elem.style.transform = "translateX(" + offset + 'vh)'; 
-        offset += 2;
+        elem.style.opacity = opacity; 
+        opacity += 0.04;
     }
 }
 
