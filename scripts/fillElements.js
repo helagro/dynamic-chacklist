@@ -55,8 +55,10 @@ function addChecklistItemElements(checklistGroupElement, checklistItems){
     let itemsAdded = 0
     const allTags = getAllCollectedTags()
     for(checklistItem of checklistItems){
-        if(tagHidingElement(allTags, checklistItem.showRules))
+        if(tagHidingElement(allTags, checklistItem.showRules)){
+            getNextElementId()
             continue
+        }
 
         addDescItemElement(checklistGroupElement, checklistItem.name)
         addChecklistItemElement(checklistGroupElement, checklistItem)
@@ -227,7 +229,6 @@ function animateShowGroup(elem){
 }
 function animateHightExpand(elem){
     var id = setInterval(heightFrame, 5);
-    console.log(elem.offsetHeight)
     var maxHeight = elem.offsetHeight;
     var lastMeasuredHeight = -1
 

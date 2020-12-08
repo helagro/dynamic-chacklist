@@ -15,7 +15,6 @@ function textInputListener(event){
     const textInputDiv = event.target.parentElement
     const textInput = textInputDiv.children[0]
     const inputText = textInput.value
-    console.log(textInput, inputText)
 
     if(inputText == "")
         return
