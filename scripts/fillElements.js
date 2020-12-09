@@ -187,6 +187,7 @@ function createRadioBtn(){
     return radioBtn
 }
 
+//ANCHOR creates number input
 function createNumberInput(checklistItem){
     const numberInputDiv = document.createElement("div")
     numberInputDiv.appendChild(createNumberElement())
@@ -198,6 +199,7 @@ function createNumberElement(){
     const numberInput = document.createElement("input")
     numberInput.type = "number"
     numberInput.className = "numberInput"
+    numberInput.step = "any"
 
     return numberInput
 }
@@ -224,6 +226,7 @@ function getNextElementId(){
 }
 
 
+//ANCHOR group animations
 function animateShowGroup(elem){
     animateHightExpand(elem) //calls opacity
 }
