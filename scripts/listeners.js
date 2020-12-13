@@ -59,6 +59,10 @@ function removeTagsWithId(checklistGroupItem, id){
     }
 }
 function getTagsFromChecklistItem(checklistItem, value){
+    if(checklistItem.type === "number"){
+        return [checklistItem.name + ":" + value];
+    }
+
     for (checklistItemItem of checklistItem.items){
         if (checklistItemItem.text === value){
             const selectedValue = checklistItemItem

@@ -13,19 +13,21 @@ function main(){
 function nextChecklistGroup(){
     updateChecklistIndexes()
 
-    if(checklistGroupI >= checklistGroups.length)
+    if(checklistGroupI >= checklistGroups.length){
+        console.log(getAllCollectedTags())
         return
+    }
 
     const checklistGroup = checklistGroups[checklistGroupI]
     const checklistGroupElement = addChecklistGroupElement(checklistGroupI)
 
     addChecklistGroupHeaderElement(checklistGroupElement, checklistGroup.header)
-    const amountAdded = addChecklistItemElements(checklistGroupElement, checklistGroup.items)
-    checklistGroup.itemAmountOnScreen = amountAdded
+    const amountInteractableAdded = addChecklistItemElements(checklistGroupElement, checklistGroup.items)
+    checklistGroup.itemAmountOnScreen = amountInteractableAdded
 
     animateShowGroup(checklistGroupElement)
 
-    if(amountAdded == checklistGroup.finishedItemsIds.length)
+    if(amountInteractableAdded == checklistGroup.finishedItemsIds.length)
         nextChecklistGroup()
 
 }
@@ -52,7 +54,7 @@ function addChecklistGroupHeaderElement(checklistGroupElement, headerStr){
 
 //ANCHOR adds checklist items
 function addChecklistItemElements(checklistGroupElement, checklistItems){
-    let itemsAdded = 0
+    let interactableItemsAdded = 0
     const allTags = getAllCollectedTags()
     for(checklistItem of checklistItems){
         if(tagHidingElement(allTags, checklistItem.showRules)){
@@ -61,11 +63,14 @@ function addChecklistItemElements(checklistGroupElement, checklistItems){
         }
 
         addDescItemElement(checklistGroupElement, checklistItem.name)
-        addChecklistItemElement(checklistGroupElement, checklistItem)
+        const interactable = addChecklistItemElement(checklistGroupElement, checklistItem)
 
-        itemsAdded++
+        if(!interactable)
+            continue
+
+        interactableItemsAdded++
     }
-    return itemsAdded
+    return interactableItemsAdded
 }
 function getAllCollectedTags(){
     let tags = []
@@ -119,13 +124,15 @@ function addChecklistItemElement(checklistGroupElement, checklistItem){
             break
         case "link":
             openChecklistItemPage(checklistItem)
-            return
+            getNextElementId()
+            return false
         default:
             alert("Invalid checklistItemType: " + checklistItem.type)
     }   
 
     element.id = getNextElementId()
     checklistGroupElement.appendChild(element)
+    return true
 }
 
 
