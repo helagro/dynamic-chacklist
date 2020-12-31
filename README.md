@@ -1,9 +1,13 @@
+## Note
+Anything might happen and I claim no responsibility
+
 ## Status
 Not finished
 
 ### Example of checklistItems.js
 ```javascript
-const checklistGroups = [
+BLOCK_GOOGLE_DRIVE = true
+checklistGroups = [
     {header:"Start", finishedItemsIds:[], collectedTags:[], itemAmountOnScreen:-1, items:[
         {name:"What is your favorite fruit?", type:"select", showRules:{type:"", tags:[]}, items:[
             {text:"Apples", tags:["APPLES", "KNOWS_ABOUT_FRUIT"]}, 
@@ -33,5 +37,6 @@ const checklistGroups = [
         ]}
 
     ]}
+    main()
 ]
 ```

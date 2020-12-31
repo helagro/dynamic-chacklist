@@ -1,6 +1,7 @@
 //ANCHOR views
 const checklistsContainer = document.getElementById("checklistsContainer")
 
+let checklistGroups
 var checklistGroupI = -1
 var elementIdI = -99
 
@@ -269,4 +270,4 @@ function opacity(elem){
 }
 
 
-main()
+//main()

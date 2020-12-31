@@ -96,6 +96,13 @@ p{
     opacity: 0.3;
 }
 
+/*ANCHOR Login handlers*/
+.google-login-div{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
 @media (max-width: 50em){
     body{
         font-size: 70%;

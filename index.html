@@ -15,8 +15,19 @@
 
     </section>
 
-    <script src="../checklistItems.js"></script>
+    <div class="google-login-div">
+        <button id="authorize_button">Login</button>
+        <button id="signout_button">Log out</button>
+    </div>
+
     <script src="scripts/listeners.js"></script>
     <script src="scripts/fillElements.js"></script>
+    <script src="scripts/googleDrive.js"></script>
+    <script src="../checklistItems.js"></script>
+
+    <script async defer src="https://apis.google.com/js/api.js"
+        onload="this.onload=function(){};handleClientLoad()"
+        onreadystatechange="if (this.readyState === 'complete') this.onload()">
+  </script>
 </body>
 </html>
