@@ -37,6 +37,6 @@ checklistGroups = [
         ]}
 
     ]}
-    main()
 ]
+main()
 ```

@@ -1,0 +1,3 @@
+function getChecklistGroups(){
+    return checklistGroups
+}
