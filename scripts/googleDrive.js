@@ -61,7 +61,8 @@ async function fillWithDriveJson(){
     try {
         checklistGroups = JSON.parse(JSON.parse(s))   
     } catch (error) {
-        print(s)
+        alert(error)
+        console.log(s)
     }
     main()
 }
