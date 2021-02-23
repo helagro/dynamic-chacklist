@@ -58,7 +58,11 @@ async function fillWithDriveJson(){
     const checklistItemsStr = await getAppDataFileContent(docID)
     let s = JSON.stringify(checklistItemsStr.trim())
 
-    checklistGroups = JSON.parse(JSON.parse(s))
+    try {
+        checklistGroups = JSON.parse(JSON.parse(s))   
+    } catch (error) {
+        print(s)
+    }
     main()
 }
 function getFilename(){
