@@ -1,9 +1,3 @@
-## Note
-Anything might happen and I claim no responsibility
-
-## Status
-Not finished
-
 ### Example of checklistItems.js
 ```javascript
 BLOCK_GOOGLE_DRIVE = true
