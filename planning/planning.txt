@@ -1,6 +1,0 @@
-types
-    select
-    checkbox
-    text
-    y/n opt
-
